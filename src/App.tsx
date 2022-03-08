@@ -20,9 +20,9 @@ function App() {
         <PostCard
           title={redditPost.title}
           author_name={redditPost.author}
-          post_text={redditPost.selftext}
           awards={redditPost.all_awardings.length}
           permalink={redditPost.permalink}
+          subreddit={redditPost.subreddit}
         />
       )}
     </div>

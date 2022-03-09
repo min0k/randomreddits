@@ -1,0 +1,30 @@
+.cardContainer {
+  border: 2px blue solid;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 420px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.author {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.subreddit {
+  margin: 0em;
+}
+
+.awards {
+  margin: 0em;
+}
+
+.link {
+  margin: 0em;
+}

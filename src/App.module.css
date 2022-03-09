@@ -1,0 +1,6 @@
+.app {
+  margin: 40px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}

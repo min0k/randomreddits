@@ -1,4 +1,4 @@
-import React from "react";
+import styles from "./PostCard.module.css";
 
 interface IProps {
   title: string;
@@ -12,12 +12,14 @@ const REDDIT_LINK = "https://www.reddit.com";
 
 export default function PostCard(props: IProps) {
   return (
-    <div>
-      <h1>{props.title}</h1>
-      <h2>Author: {props.author}</h2>
-      <p>Subreddit: {props.subreddit}</p>
-      <p># of Awards: {props.all_awardings.length}</p>
-      <a href={`${REDDIT_LINK}/${props.permalink}`}>Link to post</a>
+    <div className={styles.cardContainer}>
+      <h1 className={styles.title}>{props.title}</h1>
+      <h2 className={styles.author}>Author: {props.author}</h2>
+      <p className={styles.subreddit}>Subreddit: {props.subreddit}</p>
+      <p className={styles.awards}># of Awards: {props.all_awardings.length}</p>
+      <a className={styles.link} href={`${REDDIT_LINK}/${props.permalink}`}>
+        Link to post
+      </a>
     </div>
   );
 }

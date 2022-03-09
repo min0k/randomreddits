@@ -8,6 +8,8 @@ interface IProps {
   subreddit: string;
 }
 
+const REDDIT_LINK = "https://www.reddit.com";
+
 export default function PostCard(props: IProps) {
   return (
     <div>
@@ -15,7 +17,7 @@ export default function PostCard(props: IProps) {
       <h2>Author: {props.author}</h2>
       <p>Subreddit: {props.subreddit}</p>
       <p># of Awards: {props.all_awardings.length}</p>
-      <a href={`https://www.reddit.com/${props.permalink}`}>Link to post</a>
+      <a href={`${REDDIT_LINK}/${props.permalink}`}>Link to post</a>
     </div>
   );
 }

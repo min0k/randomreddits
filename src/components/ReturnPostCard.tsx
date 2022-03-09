@@ -1,6 +1,8 @@
 import React from "react";
 import getRedditData from "../api/getRedditData";
 import PostCard from "./PostCard";
+import styles from "./PostCard.module.css";
+import Spinner from "react-bootstrap/Spinner";
 
 export default function ReturnPostCard() {
   const [redditPost, setRedditPost] = React.useState<any>();
@@ -10,7 +12,13 @@ export default function ReturnPostCard() {
   }, []);
 
   if (redditPost === undefined) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className={styles.cardContainer}>
+        <Spinner animation="border" size="sm" variant="secondary">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
   }
 
   return (
@@ -18,7 +26,6 @@ export default function ReturnPostCard() {
       <PostCard
         title={redditPost.title}
         author={redditPost.author}
-        all_awardings={redditPost.all_awardings}
         permalink={redditPost.permalink}
         subreddit={redditPost.subreddit}
       />

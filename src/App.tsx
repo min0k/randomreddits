@@ -1,32 +1,13 @@
 import "./App.css";
 import React from "react";
-import getRedditData from "./api/getRedditData";
 import PostCard from "./components/PostCard";
 
+const NUMBER_OF_CARDS = 10;
+
 function App() {
-  const [redditPost, setRedditPost] = React.useState<any>();
+  const RandomReddits = [...Array(NUMBER_OF_CARDS)].map((e, i) => <PostCard />);
 
-  React.useEffect(() => {
-    getRedditData().then((res) => setRedditPost(res));
-  }, []);
-
-  console.log(redditPost);
-
-  return (
-    <div className="App">
-      {redditPost === undefined ? (
-        <h1>Loading...</h1>
-      ) : (
-        <PostCard
-          title={redditPost.title}
-          author_name={redditPost.author}
-          awards={redditPost.all_awardings.length}
-          permalink={redditPost.permalink}
-          subreddit={redditPost.subreddit}
-        />
-      )}
-    </div>
-  );
+  return <div className="App">{RandomReddits}</div>;
 }
 
 export default App;

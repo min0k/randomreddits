@@ -12,8 +12,6 @@ function App() {
     <ReturnPostCard key={i} />
   ));
 
-  console.log("Rerendered!");
-
   return (
     <div className={styles.app}>
       <button

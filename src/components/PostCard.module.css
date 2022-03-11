@@ -1,5 +1,5 @@
 .cardContainer {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -16,7 +16,8 @@
   margin: 0;
   font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
+  overflow-wrap: break-word;
 }
 
 .author {
@@ -31,5 +32,6 @@
   margin: 0em;
   text-decoration: none;
   color: #1e1870;
+  font-size: 0.8rem;
   font-weight: bold;
 }

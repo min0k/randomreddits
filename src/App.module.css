@@ -1,6 +1,20 @@
 .app {
-  margin: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.postContainer {
+  margin: 30px;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.randomizeButton {
+  margin-top: 30px;
+  background-color: transparent;
+  align-self: center;
+  background-color: #e1e1f9;
+  border: none;
+  padding: 6px 12px;
 }

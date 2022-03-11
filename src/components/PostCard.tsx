@@ -1,5 +1,7 @@
 import styles from "./PostCard.module.css";
 
+const REDDIT_URL = "https://www.reddit.com";
+
 interface IProps {
   title: string;
   author: string;
@@ -7,15 +9,13 @@ interface IProps {
   subreddit: string;
 }
 
-const REDDIT_LINK = "https://www.reddit.com";
-
 export default function PostCard(props: IProps) {
   return (
     <div className={styles.cardContainer}>
       <p className={styles.subreddit}>r/{props.subreddit}</p>
       <h1 className={styles.title}>{props.title}</h1>
       <h2 className={styles.author}>by {props.author}</h2>
-      <a className={styles.link} href={`${REDDIT_LINK}/${props.permalink}`}>
+      <a className={styles.link} href={`${REDDIT_URL}/${props.permalink}`}>
         Link to post
       </a>
     </div>

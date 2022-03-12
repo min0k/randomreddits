@@ -1,4 +1,3 @@
-const URI = "https://www.reddit.com/random.json";
 const TURI =
   "https://randomreddits.netlify.app/.netlify/functions/get_reddit_data";
 

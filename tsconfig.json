@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "netlify"  ]
+, "netlify_functions"  ]
 }

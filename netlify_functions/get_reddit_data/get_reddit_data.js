@@ -1,5 +1,10 @@
 import fetch from "node-fetch";
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET",
+};
+
 const API_ENDPOINT = "https://www.reddit.com/random.json";
 
 exports.handler = async (event, context) => {
@@ -11,6 +16,7 @@ exports.handler = async (event, context) => {
     console.log(error);
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ error: "Failed fetching data" }),
     };
   }

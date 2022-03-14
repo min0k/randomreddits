@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 import ReturnPostCard from "./components/ReturnPostCard";
 import React from "react";
+import AboutPage from "./components/AboutPage";
 
 const NUMBER_OF_CARDS = 10;
 
@@ -12,6 +13,12 @@ function App() {
     <ReturnPostCard key={i} />
   ));
 
+  const [aboutPage, setAboutPage] = React.useState(false);
+
+  if (aboutPage) {
+    return <AboutPage />;
+  }
+
   return (
     <div className={styles.app}>
       <button
@@ -21,6 +28,12 @@ function App() {
         Randomize
       </button>
       <div className={styles.postContainer}>{RandomReddits}</div>
+      <button
+        className={styles.about}
+        onClick={() => setAboutPage((prevValue) => !prevValue)}
+      >
+        About
+      </button>
     </div>
   );
 }

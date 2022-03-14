@@ -1,0 +1,27 @@
+.app {
+  composes: app from "../App.module.css";
+}
+
+.postContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  background-color: #ffeceb;
+  margin: 30px;
+  grid-gap: 18px;
+}
+
+.randomizeButton {
+  composes: randomizeButton from "../App.module.css";
+}
+
+.text {
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.portfolio {
+  color: black;
+  font-weight: 300;
+}
